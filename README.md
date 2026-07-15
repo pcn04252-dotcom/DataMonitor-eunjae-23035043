@@ -20,6 +20,7 @@ python -m src.main   # 모니터링 콘솔 실행
 ```
 pip install -r requirements-dev.txt
 pytest
+ruff check .
 ```
 
 ## 검증한 것
