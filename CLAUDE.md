@@ -9,7 +9,8 @@
 ## 기술 스택
 
 - Python 3.x + `sqlite3` (표준 라이브러리, 외부 의존성 없음)
-- 테스트: `pytest`
+- 테스트: `pytest` / 린트: `ruff` (설정은 `pyproject.toml`)
+- CI: GitHub Actions (`.github/workflows/ci.yml`) — push/PR 시 `ruff check` + `pytest` 자동 실행
 
 ## 폴더 구조
 
@@ -32,7 +33,9 @@ python -m src.main   # 모니터링 콘솔 실행
 ## 테스트 방법
 
 ```
+pip install -r requirements-dev.txt
 pytest
+ruff check .
 ```
 
 ## 코드 컨벤션

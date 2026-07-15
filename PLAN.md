@@ -52,3 +52,4 @@ tests/
 - 최초 작성
 - `db_exists()` 함수 추가: `get_connection()`은 파일이 없으면 자동 생성해버리므로, DoD의 "DB 파일이 없을 때 안내 메시지" 요구사항을 만족하려면 connection을 열기 전에 파일 존재 여부를 먼저 확인해야 했음.
 - 실제 시나리오(DB 없음 → 안내 후 정상 종료 / seed → 조회 → R 새로고침 → 0 종료) 수동 검증 완료.
+- Harness 도입: `pyproject.toml`(pytest/ruff 설정), `requirements-dev.txt`(pytest, ruff), GitHub Actions CI(`.github/workflows/ci.yml`) 추가. `ruff check` 결과 이슈 없음.
