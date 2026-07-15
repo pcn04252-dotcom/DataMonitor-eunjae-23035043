@@ -45,3 +45,4 @@ pytest
 
 - `data/app.db`는 `.gitignore`에 포함되어 커밋되지 않으므로, 이 repo만 클론해도 동작하도록 `seed.py`로 자체 데모 데이터를 만들 수 있어야 한다.
 - 스키마는 `DataPersistence` repo와 동일한 설계 방향(Item: id/name/quantity)을 따르되, 코드/DB 파일을 직접 공유하지는 않는다.
+- `main.py`에서 Windows 콘솔 기본 코드페이지(cp949) 한글 깨짐 방지를 위해 `sys.stdout.reconfigure(encoding="utf-8")` / `sys.stdin.reconfigure(encoding="utf-8")`를 적용한다 (`ConsoleMVC` PoC에서 확인된 이슈).
